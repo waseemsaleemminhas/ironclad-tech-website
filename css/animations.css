@@ -1,0 +1,75 @@
+/* ==========================================
+   Ironclad Tech - Animations
+   ========================================== */
+
+html{ scroll-behavior: smooth; }
+
+@keyframes fadeInUp{
+    from{ opacity:0; transform:translateY(24px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes floatY{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-12px); }
+}
+
+@keyframes heroEnter{
+    from{ opacity:0; transform:translateY(18px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes glowPulse{
+    0%,100%{ opacity:.7; }
+    50%{ opacity:1; }
+}
+
+.hero-image{ animation:floatY 6s ease-in-out infinite; }
+.icon-visual{ animation:floatY 7s ease-in-out infinite; }
+.detail-illustration{ animation:floatY 7s ease-in-out infinite; }
+
+/* Hero content enters on page load, no scroll trigger needed */
+.hero-section h1, .hero h1,
+.hero-section p, .hero p, .hero .hero-text,
+.hero-section .hero-buttons, .hero .mt-4,
+.hero-section .hero-badge, .hero .hero-badge, .detail-hero .eyebrow{
+    animation: heroEnter .7s ease both;
+}
+.hero-section h1, .hero h1{ animation-delay: .05s; }
+.hero-section p, .hero p, .hero .hero-text{ animation-delay: .15s; }
+.hero-section .hero-buttons, .hero .mt-4{ animation-delay: .25s; }
+
+/* Soft ambient pulse on hero background glow */
+.hero-section::after, .hero::after, .detail-hero::after,
+.why-us::after, .cta-section::after, .about-cta::after{
+    animation: glowPulse 5s ease-in-out infinite;
+}
+
+/* Stagger fade-in-up items within the same row for a cascading reveal */
+.row .fade-in-up:nth-child(1){ transition-delay: 0s; }
+.row .fade-in-up:nth-child(2){ transition-delay: .08s; }
+.row .fade-in-up:nth-child(3){ transition-delay: .16s; }
+.row .fade-in-up:nth-child(4){ transition-delay: .24s; }
+.row .fade-in-up:nth-child(5){ transition-delay: .32s; }
+.row .fade-in-up:nth-child(6){ transition-delay: .4s; }
+.row .fade-in-up:nth-child(7){ transition-delay: .48s; }
+.row .fade-in-up:nth-child(8){ transition-delay: .56s; }
+
+.navbar.shadow{ transition:box-shadow .25s ease; }
+
+/* Subtle lift on primary content cards already defined per-component in steel.css;
+   this adds a general smooth transform baseline so hover states feel consistent. */
+.service-card, .trust-card, .benefit-card, .value-card, .partner-card,
+.service-detail-card, .industry-card, .testimonial-card, .job-card, .contact-info-card{
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .hero-image, .icon-visual, .detail-illustration{ animation:none; }
+    .hero-section h1, .hero h1, .hero-section p, .hero p, .hero .hero-text,
+    .hero-section .hero-buttons, .hero .mt-4, .hero-section .hero-badge,
+    .hero .hero-badge, .detail-hero .eyebrow{ animation:none; opacity:1; }
+    .hero-section::after, .hero::after, .detail-hero::after,
+    .why-us::after, .cta-section::after, .about-cta::after{ animation:none; }
+}

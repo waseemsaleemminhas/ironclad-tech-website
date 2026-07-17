@@ -1,0 +1,84 @@
+/*==============================
+SECTION TITLES
+==============================*/
+
+.section-title{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0B3D91;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-12px;
+
+    transform:translateX(-50%);
+
+    width:80px;
+
+    height:4px;
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+/*==============================
+SECTION SPACING
+==============================*/
+
+.about-company,
+.story-section,
+.timeline-section,
+.mission-section,
+.values-section,
+.why-partner,
+.process-section,
+.about-cta{
+
+    padding:100px 0;
+
+}
+.value-card,
+.partner-card,
+.timeline-card,
+.process-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    height:100%;
+
+}
+.btn-warning{
+
+    transition:.35s;
+
+}
+
+.btn-warning:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.35);
+
+}

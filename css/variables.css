@@ -1,0 +1,40 @@
+/* ==========================================
+   Ironclad Tech - Design System
+   ========================================== */
+
+:root {
+
+    /* ===== Brand Colors ===== */
+
+    --primary: #0B3D91;
+    --primary-dark: #081B3A;
+    --primary-light: #2563EB;
+
+    /* ===== Metallic Gold ===== */
+
+    --gold: #D4AF37;
+    --gold-light: #F4D35E;
+    --gold-dark: #B8860B;
+
+    /* ===== Neutral ===== */
+
+    --white: #FFFFFF;
+    --light: #F8FAFC;
+    --dark: #111827;
+    --gray: #6B7280;
+
+    /* ===== Shadows ===== */
+
+    --shadow-sm: 0 5px 15px rgba(0,0,0,.08);
+    --shadow-md: 0 10px 30px rgba(0,0,0,.12);
+    --shadow-lg: 0 20px 50px rgba(0,0,0,.18);
+
+    /* ===== Radius ===== */
+
+    --radius:18px;
+
+    /* ===== Transition ===== */
+
+    --transition:.3s ease;
+
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Ironclad Tech",
+  "short_name": "Ironclad Tech",
+  "description": "Healthcare BPO, Insurance Outsourcing, AI Voice Solutions, Customer Support and Back Office Services.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0B3D91",
+  "icons": [
+    { "src": "favicon/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "favicon/favicon-192.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

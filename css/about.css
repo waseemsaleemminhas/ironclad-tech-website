@@ -1,0 +1,382 @@
+/* ==========================
+   ABOUT HERO
+========================== */
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+.hero-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    color:#ffffff;
+
+    opacity:.95;
+
+}
+
+.page-hero{
+
+    padding:120px 0;
+
+}
+/* ==========================
+   MINI FEATURE CARDS
+========================== */
+
+.mini-feature-card{
+
+    background:#fff;
+
+    border-radius:16px;
+
+    padding:25px;
+
+    height:100%;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    text-align:center;
+
+}
+
+.mini-feature-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.mini-feature-card i{
+
+    font-size:36px;
+
+    color:var(--gold);
+
+    margin-bottom:15px;
+
+}
+
+.mini-feature-card h5{
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+/*==============================
+ABOUT STATS
+==============================*/
+
+.stats-section{
+
+    background:#081B3A;
+
+    color:#fff;
+
+}
+
+.stats-section .counter{
+
+    color:#D4AF37;
+
+    font-size:52px;
+
+    font-weight:800;
+
+}
+
+.stats-section p{
+
+    font-size:18px;
+
+    margin-top:10px;
+
+    color:#E5E7EB;
+
+}
+
+.hero-badge{
+
+    display:inline-block;
+
+    background:rgba(212,175,55,.15);
+
+    color:#D4AF37;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+    border:1px solid rgba(212,175,55,.4);
+
+}
+/* ===== OUR JOURNEY ===== */
+
+.timeline-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    height:100%;
+
+    transition:.3s;
+
+    border-top:5px solid #D4AF37;
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.timeline-card h3{
+
+    color:#0B3D91;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+/*==============================
+WHY PARTNER
+==============================*/
+
+.why-partner{
+
+    background:#F8FAFC;
+
+}
+
+.partner-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    height:100%;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    border-bottom:4px solid transparent;
+
+}
+
+.partner-card:hover{
+
+    transform:translateY(-10px);
+
+    border-bottom:4px solid #D4AF37;
+
+}
+
+.partner-card i{
+
+    font-size:42px;
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.partner-card h4{
+
+    color:#0B3D91;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.partner-card p{
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+/*==============================
+OUR PROCESS
+==============================*/
+
+.process-section{
+
+    background:#F8FAFC;
+
+}
+
+.process-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    height:100%;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.process-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.process-number{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:#0B3D91;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.process-card:hover .process-number{
+
+    background:#D4AF37;
+
+    color:#081B3A;
+
+}
+/*==============================
+SECTION TITLES
+==============================*/
+
+.section-title{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0B3D91;
+
+    margin-bottom:20px;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-12px;
+
+    transform:translateX(-50%);
+
+    width:80px;
+
+    height:4px;
+
+    background:#D4AF37;
+
+    border-radius:20px;
+
+}
+/*==============================
+SECTION SPACING
+==============================*/
+
+.about-company,
+.story-section,
+.timeline-section,
+.mission-section,
+.values-section,
+.why-partner,
+.process-section,
+.about-cta{
+
+    padding:100px 0;
+
+}
+.value-card,
+.partner-card,
+.timeline-card,
+.process-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;
+
+    height:100%;
+
+}
+.btn-warning{
+
+    transition:.35s;
+
+}
+
+.btn-warning:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 15px 30px rgba(212,175,55,.35);
+
+}

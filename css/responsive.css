@@ -1,0 +1,25 @@
+/* ==========================================
+   Ironclad Tech - Responsive Overrides
+   ========================================== */
+
+@media (max-width: 991.98px){
+    .hero-section, .hero, .detail-hero{ padding-top:60px; padding-bottom:50px; text-align:center; }
+    .hero-buttons, .detail-hero .btn{ justify-content:center; }
+    .icon-visual{ margin-top:40px; max-width:300px; }
+    .detail-hero p{ margin-left:auto; margin-right:auto; }
+}
+
+@media (max-width: 767.98px){
+    .top-bar .top-left a:nth-child(2){ display:none; } /* hide email on very small screens, phone stays */
+    .hero-stats{ flex-wrap:wrap; gap:18px; justify-content:center; }
+    .form-panel{ padding:28px 22px; }
+    .job-card{ flex-direction:column; align-items:flex-start; }
+    .map-frame-full{ height:240px; }
+}
+
+@media (max-width: 575.98px){
+    .hero h1, .hero-section h1{ font-size:2rem; }
+    .section-title{ font-size:1.6rem; }
+    .icon-visual{ max-width:240px; }
+    .icon-visual i{ font-size:56px; }
+}

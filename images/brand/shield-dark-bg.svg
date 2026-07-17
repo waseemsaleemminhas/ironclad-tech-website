@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 140">
+<defs>
+<linearGradient id="sg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#F4D35E"/>
+<stop offset="45%" stop-color="#D4AF37"/>
+<stop offset="100%" stop-color="#B8860B"/>
+</linearGradient>
+</defs>
+<!-- Shield body -->
+<path d="M60 6 L110 24 V64 C110 100 88 122 60 134 C32 122 10 100 10 64 V24 Z"
+      fill="#0F2A5C" stroke="url(#sg)" stroke-width="4" stroke-linejoin="round"/>
+<!-- Inner rivet line (ironclad plating motif) -->
+<path d="M60 16 L100 31 V63 C100 93 82 112 60 122 C38 112 20 93 20 63 V31 Z"
+      fill="none" stroke="url(#sg)" stroke-width="1.6" opacity=".5" stroke-dasharray="3 6"/>
+<!-- Human figure: head + shoulders -->
+<circle cx="60" cy="55" r="14" fill="#FFFFFF"/>
+<path d="M36 96 C36 78 46 71 60 71 C74 71 84 78 84 96 Z" fill="#FFFFFF"/>
+</svg>
