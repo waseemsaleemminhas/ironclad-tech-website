@@ -15,6 +15,8 @@
     .form-panel{ padding:28px 22px; }
     .job-card{ flex-direction:column; align-items:flex-start; }
     .map-frame-full{ height:240px; }
+    .footer-brand-mark, .footer .footer-tagline{ text-align:center; margin-left:auto; margin-right:auto; }
+    .footer .social-row{ justify-content:center; }
 }
 
 @media (max-width: 575.98px){

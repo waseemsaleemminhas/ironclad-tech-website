@@ -278,9 +278,10 @@ body, p, a, li, .btn, input, textarea, select{
 .footer-cta h3{ color:#fff; font-weight:700; margin:0; font-size: 1.5rem; }
 .footer-cta p{ color: var(--steel-300); margin: 4px 0 0; }
 .footer-main{ position: relative; z-index: 2; padding: 60px 0 30px; }
-.footer-brand-mark{ font-size: 1.4rem; font-weight: 700; margin-bottom: 14px; }
+.footer-brand-mark{ font-size: 1.4rem; font-weight: 700; margin-bottom: 14px; text-align: left; }
 .footer-brand-mark .logo-blue{ color:#fff; }
-.footer .footer-tagline{ color: var(--steel-300); max-width: 280px; margin-bottom: 20px; }
+.footer .footer-tagline{ color: var(--steel-300); max-width: 280px; margin-bottom: 20px; text-align: left; }
+.footer .social-row{ justify-content: flex-start; }
 .footer h5{
     color: #fff;
     font-weight: 700;
