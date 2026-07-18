@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ironcladtech.com/sitemap.xml
+Sitemap: https://www.getironcladtech.com/sitemap.xml
