@@ -101,6 +101,14 @@ body, p, a, li, .btn, input, textarea, select{
     overflow: hidden;
     color: #fff;
 }
+.hero-section{
+    background:
+        linear-gradient(rgba(8,27,58,.80), rgba(8,27,58,.75)),
+        url("../images/hero/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 .hero-section::before, .hero::before, .detail-hero::before,
 .why-us::before, .cta-section::before, .about-cta::before{
     content:"";
