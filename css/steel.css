@@ -318,7 +318,9 @@ body, p, a, li, .btn, input, textarea, select{
     display:flex; gap:10px; align-items:flex-start;
     margin-bottom: 14px; color: var(--steel-300);
 }
-.footer .footer-contact-item i{ color: var(--signal); margin-top: 3px; width: 16px; }
+.footer .footer-contact-item i{ color: var(--signal); margin-top: 3px; width: 16px; flex-shrink:0; }
+.footer .footer-contact-item span,
+.footer .footer-contact-item a{ min-width:0; overflow-wrap:break-word; }
 .footer .social-row{ display:flex; gap:10px; margin-top: 18px; }
 .footer .social-row a{
     width: 36px; height: 36px;
