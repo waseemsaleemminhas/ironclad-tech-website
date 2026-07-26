@@ -102,8 +102,7 @@ body, p, a, li, .btn, input, textarea, select{
     color: #fff;
 }
 .hero-section{
-    background:
-        linear-gradient(rgba(8,27,58,.75), rgba(8,27,58,.72));
+    background: #1a3a52;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
