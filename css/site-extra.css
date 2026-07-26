@@ -54,8 +54,12 @@
 /* ---- Illustration wrap (custom SVG art on hero sections) ---- */
 .illustration-wrap{
     position:relative;
-    max-width:420px;
+    width:100%;
     margin:0 auto;
+}
+.hero-section .illustration-wrap{
+    width: 100%;
+    max-width: none;
 }
 .detail-illustration{
     width:100%;
