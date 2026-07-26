@@ -55,7 +55,12 @@
 .illustration-wrap{
     position:relative;
     width:100%;
+    max-width:650px;
     margin:0 auto;
+}
+.hero-section .illustration-wrap{
+    width:100%;
+    max-width:none;
 }
 .hero-section .illustration-wrap{
     width: 100%;
@@ -63,8 +68,15 @@
 }
 .detail-illustration{
     width:100%;
+    height:auto;
     display:block;
     filter:drop-shadow(0 20px 40px rgba(0,0,0,.35));
+}
+.hero-section .detail-illustration{
+    max-width:100%;
+    height:auto;
+    object-fit:contain;
+    aspect-ratio:16/9;
 }
 .illustration-wrap .float-badge{
     position:absolute;
