@@ -103,8 +103,7 @@ body, p, a, li, .btn, input, textarea, select{
 }
 .hero-section{
     background:
-        linear-gradient(rgba(8,27,58,.75), rgba(8,27,58,.72)),
-        url("../images/hero/healthcare-bpo-dashboard.png");
+        linear-gradient(rgba(8,27,58,.75), rgba(8,27,58,.72));
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
