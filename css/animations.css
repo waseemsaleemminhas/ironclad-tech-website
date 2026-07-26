@@ -24,9 +24,53 @@ html{ scroll-behavior: smooth; }
     50%{ opacity:1; }
 }
 
+@keyframes heroMediaFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-10px); }
+}
+
+@keyframes heroMediaGlow{
+    0%,100%{ transform:scale(1) rotate(0deg); opacity:.85; }
+    50%{ transform:scale(1.12) rotate(8deg); opacity:1; }
+}
+
+@keyframes heroShine{
+    0%{ transform:translateX(-130%) skewX(-12deg); }
+    32%,100%{ transform:translateX(160%) skewX(-12deg); }
+}
+
+@keyframes heroBadgePop{
+    from{ opacity:0; transform:translateY(14px) scale(.92); }
+    to{ opacity:1; transform:translateY(0) scale(1); }
+}
+
+@keyframes heroBadgeFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-8px); }
+}
+
+@keyframes heroBadgeFloatAlt{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(8px); }
+}
+
 .hero-image{ animation:floatY 6s ease-in-out infinite; }
 .icon-visual{ animation:floatY 7s ease-in-out infinite; }
 .detail-illustration{ animation:floatY 7s ease-in-out infinite; }
+
+/* ---- Homepage hero dashboard image: ambient glow, shine sweep, float, badges ---- */
+.hero-v2 .hero-media-glow{ animation:heroMediaGlow 9s ease-in-out infinite; }
+.hero-v2 .hero-media-shine{ animation:heroShine 6.5s ease-in-out infinite; animation-delay:1.3s; }
+.hero-v2 .hero-media-frame{ animation:heroMediaFloat 6s ease-in-out infinite; }
+/* Once JS activates mouse-parallax tilt, the CSS float hands off to avoid fighting the inline transform */
+.hero-v2 .hero-media.js-parallax-active .hero-media-frame{ animation:none; }
+
+.hero-v2 .hero-media .float-badge{
+    opacity:0;
+    animation: heroBadgePop .6s cubic-bezier(.2,.8,.2,1) both, heroBadgeFloat 5s ease-in-out infinite;
+}
+.hero-v2 .hero-badge-top{ animation-delay:.6s, .6s; }
+.hero-v2 .hero-badge-bottom{ animation-delay:.75s, 1.4s; animation-name: heroBadgePop, heroBadgeFloatAlt; }
 
 /* Hero content enters on page load, no scroll trigger needed */
 .hero-section h1, .hero h1,
@@ -72,4 +116,8 @@ html{ scroll-behavior: smooth; }
     .hero .hero-badge, .detail-hero .eyebrow{ animation:none; opacity:1; }
     .hero-section::after, .hero::after, .detail-hero::after,
     .why-us::after, .cta-section::after, .about-cta::after{ animation:none; }
+    .hero-v2 .hero-media-glow, .hero-v2 .hero-media-shine,
+    .hero-v2 .hero-media-frame, .hero-v2 .hero-media .float-badge{ animation:none; }
+    .hero-v2 .hero-media .float-badge{ opacity:1; }
+    .hero-v2 .hero-media-frame img{ transition:none; }
 }

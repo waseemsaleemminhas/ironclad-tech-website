@@ -95,8 +95,27 @@
 .hero-v2 h1{font-size:3.15rem;line-height:1.14;margin-bottom:22px;}
 .hero-v2 .hero-lead{font-size:1.12rem;line-height:1.62;margin-bottom:0;opacity:.88;}
 .hero-v2 .hero-badge{margin-bottom:20px;}
-.hero-v2 .hero-media{margin:0;max-width:100%;}
-.hero-v2 .hero-media img{width:100%;height:auto;display:block;border-radius:14px;}
+.hero-v2 .hero-media{position:relative;margin:0;max-width:100%;padding:0 6%;}
+.hero-v2 .hero-media-glow{
+  position:absolute;inset:2% -2%;z-index:0;border-radius:26px;pointer-events:none;
+  background:radial-gradient(circle at 28% 30%, rgba(212,175,55,.4), transparent 60%),
+             radial-gradient(circle at 74% 72%, rgba(37,99,235,.32), transparent 60%);
+  filter:blur(42px);
+}
+.hero-v2 .hero-media-frame{position:relative;z-index:1;border-radius:14px;overflow:hidden;perspective:1000px;}
+.hero-v2 .hero-media-frame img{
+  width:100%;height:auto;display:block;border-radius:14px;position:relative;
+  box-shadow:0 30px 60px -18px rgba(8,27,58,.55), 0 0 0 1px rgba(255,255,255,.08);
+  will-change:transform;transition:transform .15s ease-out;
+}
+.hero-v2 .hero-media-shine{
+  position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(115deg, transparent 42%, rgba(255,255,255,.4) 50%, transparent 58%);
+  transform:translateX(-130%) skewX(-12deg);
+}
+.hero-v2 .hero-media .float-badge{position:absolute;z-index:3;}
+.hero-v2 .hero-badge-top{top:-6%;right:2%;}
+.hero-v2 .hero-badge-bottom{bottom:-6%;left:2%;}
 .hero-v2 .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px;}
 .hero-v2 .hero-note{margin:18px 0 0;font-size:.94rem;line-height:1.55;opacity:.7;}
 .hero-v2 .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:52px;padding-top:26px;border-top:1px solid rgba(255,255,255,.18);text-align:center;}
@@ -104,8 +123,8 @@
 .hero-v2 .hero-stats p{margin:0;font-size:.95rem;opacity:.75;}
 @media (max-width:1199.98px){.hero-v2 h1{font-size:2.7rem;}}
 @media (max-width:991.98px){.hero-v2 h1{font-size:2.5rem;}.hero-v2 .hero-media{margin-top:36px;}.hero-v2 .hero-cta{justify-content:flex-start;}}
-@media (max-width:767.98px){.hero-v2 .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px;margin-top:38px;}}
-@media (max-width:575.98px){.hero-v2 h1{font-size:2rem;}.hero-v2 .hero-cta .btn{width:100%;}}
+@media (max-width:767.98px){.hero-v2 .hero-stats{grid-template-columns:repeat(2,1fr);gap:26px;margin-top:38px;}.hero-v2 .hero-media{padding:0 4%;}}
+@media (max-width:575.98px){.hero-v2 h1{font-size:2rem;}.hero-v2 .hero-cta .btn{width:100%;}.hero-v2 .hero-badge-top,.hero-v2 .hero-badge-bottom{display:none;}}
 </style>
 <div class="container">
 <div class="row align-items-center g-4 g-lg-5">
@@ -119,8 +138,17 @@
 </div>
 </div>
 <div class="col-lg-6 fade-in-up">
-<div class="hero-media">
-<img src="images/hero/healthcare-bpo-dashboard.png" class="img-fluid" alt="Ironclad Tech healthcare and insurance BPO growth dashboard">
+<div class="hero-media" id="heroMediaWrap">
+<div class="hero-media-glow"></div>
+<div class="hero-media-frame">
+<picture>
+<source srcset="images/hero/healthcare-bpo-dashboard.webp" type="image/webp">
+<img src="images/hero/healthcare-bpo-dashboard.png" class="img-fluid" id="heroMediaImg" alt="Ironclad Tech healthcare and insurance BPO growth dashboard" width="1400" height="787" loading="eager">
+</picture>
+<div class="hero-media-shine"></div>
+</div>
+<div class="float-badge hero-badge-top"><i class="fas fa-shield-halved"></i> HIPAA Compliant</div>
+<div class="float-badge hero-badge-bottom"><i class="fas fa-chart-line"></i> Real-Time Insights</div>
 </div>
 <p class="hero-note">Dedicated teams aligned to your time zone, with onboarding typically inside two weeks.</p>
 </div>
@@ -266,7 +294,10 @@
 </div>
 <div class="col-lg-6 text-center fade-in-up">
 <div class="illustration-wrap">
-<img src="images/about/why-choose-ironclad-tech.png" class="img-fluid detail-illustration" alt="Why Choose Ironclad Tech - Benefits and Operations" style="width: 100%; height: auto;">
+<picture>
+<source srcset="images/about/why-choose-ironclad-tech.webp" type="image/webp">
+<img src="images/about/why-choose-ironclad-tech.png" class="img-fluid detail-illustration" alt="Why Choose Ironclad Tech - Benefits and Operations" style="width: 100%; height: auto;" width="1400" height="787" loading="lazy">
+</picture>
 </div>
 </div>
 </div>
@@ -359,7 +390,10 @@
 
 <section class="cta-section">
 <div class="container text-center">
-<div class="cta-shield"><img src="images/cta/ready-to-transform.jpg" alt="" aria-hidden="true" style="width: 100%; max-width: 700px; height: auto;"></div>
+<div class="cta-shield"><picture>
+<source srcset="images/cta/ready-to-transform.webp" type="image/webp">
+<img src="images/cta/ready-to-transform.jpg" alt="" aria-hidden="true" style="width: 100%; max-width: 700px; height: auto;" loading="lazy">
+</picture></div>
 <h2>Ready to Transform Your Business?</h2>
 <p>Partner with Ironclad Tech to streamline operations, improve customer experience, and scale with confidence.</p>
 <a href="/quote" class="btn btn-warning btn-lg mt-4">Request a Free Consultation</a>
@@ -449,5 +483,6 @@
 <script src="js/script.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/counter.js"></script>
+<script src="js/hero-parallax.js"></script>
 </body>
 </html>
