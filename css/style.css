@@ -1029,16 +1029,18 @@ align-items:center;
 
 background:
 linear-gradient(
-rgba(8,27,58,.92),
-rgba(8,27,58,.88)
+rgba(8,27,58,.75),
+rgba(8,27,58,.72)
 ),
-url("../images/hero/hero-bg.jpg");
+url("../images/hero/healthcare-bpo-dashboard.png");
 
 background-size:cover;
 
 background-position:center;
 
 background-attachment:fixed;
+
+background-repeat:no-repeat;
 
 color:white;
 
