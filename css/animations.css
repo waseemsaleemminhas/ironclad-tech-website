@@ -77,23 +77,24 @@ html{ scroll-behavior: smooth; }
     from{ opacity:0; transform:scaleX(0); }
     to{ opacity:1; transform:scaleX(1); }
 }
-.why-us .showcase-glow, .detail-hero .showcase-glow{ animation:heroMediaGlow 9s ease-in-out infinite; animation-delay:.4s; }
-.why-us .showcase-shine, .detail-hero .showcase-shine{ animation:heroShine 7s ease-in-out infinite; animation-delay:2s; }
-.why-us .showcase-frame, .detail-hero .showcase-frame{ animation:heroMediaFloat 6.5s ease-in-out infinite; }
+.why-us .showcase-glow, .detail-hero .showcase-glow, .featured-service .showcase-glow{ animation:heroMediaGlow 9s ease-in-out infinite; animation-delay:.4s; }
+.why-us .showcase-shine, .detail-hero .showcase-shine, .featured-service .showcase-shine{ animation:heroShine 7s ease-in-out infinite; animation-delay:2s; }
+.why-us .showcase-frame, .detail-hero .showcase-frame, .featured-service .showcase-frame{ animation:heroMediaFloat 6.5s ease-in-out infinite; }
 .why-us .illustration-wrap.js-parallax-active .showcase-frame,
-.detail-hero .illustration-wrap.js-parallax-active .showcase-frame{ animation:none; }
+.detail-hero .illustration-wrap.js-parallax-active .showcase-frame,
+.featured-service .illustration-wrap.js-parallax-active .showcase-frame{ animation:none; }
 
-.why-us .connector-lines::before, .detail-hero .connector-lines::before{ animation:connectorDraw 1s ease .8s both; }
-.why-us .connector-lines::after, .detail-hero .connector-lines::after{ animation:connectorDraw 1s ease 1s both; }
+.why-us .connector-lines::before, .detail-hero .connector-lines::before, .featured-service .connector-lines::before{ animation:connectorDraw 1s ease .8s both; }
+.why-us .connector-lines::after, .detail-hero .connector-lines::after, .featured-service .connector-lines::after{ animation:connectorDraw 1s ease 1s both; }
 
-.why-us .illustration-wrap .float-badge, .detail-hero .illustration-wrap .float-badge{
+.why-us .illustration-wrap .float-badge, .detail-hero .illustration-wrap .float-badge, .featured-service .illustration-wrap .float-badge{
     opacity:0;
     animation: heroBadgePop .6s cubic-bezier(.2,.8,.2,1) both, heroBadgeFloat 5s ease-in-out infinite;
 }
 .why-us .wc-badge-top{ animation-delay:.6s, .6s; }
 .why-us .wc-badge-bottom{ animation-delay:.75s, 1.4s; animation-name: heroBadgePop, heroBadgeFloatAlt; }
-.detail-hero .illustration-wrap .badge-top{ animation-delay:.6s, .6s; }
-.detail-hero .illustration-wrap .badge-bottom{ animation-delay:.75s, 1.4s; animation-name: heroBadgePop, heroBadgeFloatAlt; }
+.detail-hero .illustration-wrap .badge-top, .featured-service .illustration-wrap .badge-top{ animation-delay:.6s, .6s; }
+.detail-hero .illustration-wrap .badge-bottom, .featured-service .illustration-wrap .badge-bottom{ animation-delay:.75s, 1.4s; animation-name: heroBadgePop, heroBadgeFloatAlt; }
 
 /* Hero content enters on page load, no scroll trigger needed */
 .hero-section h1, .hero h1,
@@ -148,9 +149,14 @@ html{ scroll-behavior: smooth; }
     .why-us .connector-lines::before, .why-us .connector-lines::after,
     .detail-hero .showcase-glow, .detail-hero .showcase-shine,
     .detail-hero .showcase-frame, .detail-hero .illustration-wrap .float-badge,
-    .detail-hero .connector-lines::before, .detail-hero .connector-lines::after{ animation:none; }
-    .why-us .illustration-wrap .float-badge, .detail-hero .illustration-wrap .float-badge{ opacity:1; }
+    .detail-hero .connector-lines::before, .detail-hero .connector-lines::after,
+    .featured-service .showcase-glow, .featured-service .showcase-shine,
+    .featured-service .showcase-frame, .featured-service .illustration-wrap .float-badge,
+    .featured-service .connector-lines::before, .featured-service .connector-lines::after{ animation:none; }
+    .why-us .illustration-wrap .float-badge, .detail-hero .illustration-wrap .float-badge,
+    .featured-service .illustration-wrap .float-badge{ opacity:1; }
     .why-us .connector-lines::before, .why-us .connector-lines::after,
-    .detail-hero .connector-lines::before, .detail-hero .connector-lines::after{ opacity:1; transform:scaleX(1); }
-    .why-us .showcase-frame img, .detail-hero .showcase-frame img{ transition:none; }
+    .detail-hero .connector-lines::before, .detail-hero .connector-lines::after,
+    .featured-service .connector-lines::before, .featured-service .connector-lines::after{ opacity:1; transform:scaleX(1); }
+    .why-us .showcase-frame img, .detail-hero .showcase-frame img, .featured-service .showcase-frame img{ transition:none; }
 }
