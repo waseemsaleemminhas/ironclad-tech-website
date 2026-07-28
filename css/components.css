@@ -119,6 +119,20 @@
     transform:translateY(-4px);
     box-shadow:0 16px 40px rgba(8,27,58,.1);
 }
+.case-example-tag{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--light);
+    color:var(--gray);
+    padding:6px 14px;
+    border-radius:50px;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.04em;
+    margin-left:10px;
+}
 .case-industry{
     display:inline-flex;
     align-items:center;
