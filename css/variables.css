@@ -37,4 +37,26 @@
 
     --transition:.3s ease;
 
+    /* ===== Premium Redesign: Glass / Gold tokens ===== */
+
+    --glow-gold-shadow: rgba(212,175,55,.25);
+    --glass-border: 1px solid rgba(255,255,255,.12);
+    --glass-bg: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+    --card-radius: 20px;
+    --shadow-elevation-sm: 0 8px 20px rgba(8,27,58,.25);
+    --shadow-elevation-md: 0 20px 44px rgba(8,27,58,.35);
+    --shadow-gold-glow: 0 12px 32px rgba(212,175,55,.35);
+
+    --ease-premium: cubic-bezier(.22,.9,.25,1);
+    --ease-soft: cubic-bezier(.45,0,.2,1);
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-12: 48px;
+    --space-16: 64px;
+
 }

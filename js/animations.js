@@ -1,6 +1,6 @@
 // Ironclad Tech - Scroll reveal for .fade-in-up elements
 document.addEventListener("DOMContentLoaded", function () {
-  var items = document.querySelectorAll(".fade-in-up");
+  var items = document.querySelectorAll(".fade-in-up, .reveal-scale, .reveal-blur, .reveal-slide");
   if (!items.length) return;
 
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

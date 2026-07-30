@@ -125,6 +125,20 @@ html{ scroll-behavior: smooth; }
 
 .navbar.shadow{ transition:box-shadow .25s ease; }
 
+/* ---- Scroll-reveal variants: vary the treatment section to section ---- */
+.reveal-scale{ opacity:0; transform:scale(.92); transition:opacity .7s var(--ease-premium), transform .7s var(--ease-premium); }
+.reveal-scale.in-view{ opacity:1; transform:scale(1); }
+
+.reveal-blur{ opacity:0; filter:blur(10px); transform:translateY(16px); transition:opacity .8s var(--ease-premium), filter .8s var(--ease-premium), transform .8s var(--ease-premium); }
+.reveal-blur.in-view{ opacity:1; filter:blur(0); transform:translateY(0); }
+
+.reveal-slide{ opacity:0; transform:translateX(-32px); transition:opacity .7s var(--ease-premium), transform .7s var(--ease-premium); }
+.reveal-slide.in-view{ opacity:1; transform:translateX(0); }
+
+@media (prefers-reduced-motion: reduce){
+    .reveal-scale, .reveal-blur, .reveal-slide{ opacity:1; transform:none; filter:none; transition:none; }
+}
+
 /* Subtle lift on primary content cards already defined per-component in steel.css;
    this adds a general smooth transform baseline so hover states feel consistent. */
 .service-card, .trust-card, .benefit-card, .value-card, .partner-card,
