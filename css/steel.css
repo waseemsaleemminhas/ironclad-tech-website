@@ -612,7 +612,24 @@ p{ font-size: 16px; }
 .about-cta h2{ font-size: 32px; }
 .about-cta p{ font-size: 17px; }
 .cta-section h2{ font-size: 32px; }
-.cta-section p{ font-size: 17px; }
+.cta-section p{ font-size: 17px; max-width: 600px; margin-left: auto; margin-right: auto; }
+.cta-eyebrow{ margin-bottom: 18px; }
+.cta-buttons{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 28px;
+}
+.cta-section .cta-trust-line{
+    margin-top: 30px;
+    font-size: 13px;
+    color: rgba(255,255,255,.55);
+}
+.cta-trust-line i{ color: var(--signal); margin-right: 4px; }
+@media (max-width: 575.98px){
+    .cta-trust-line{ line-height: 1.9; }
+}
 .feature-list li{ font-size: 16px; }
 
 /* Outer .footer padding is legacy (style.css); footer-main/footer-cta/
