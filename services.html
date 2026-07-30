@@ -52,6 +52,7 @@
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/loader.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -82,6 +83,28 @@
 </script>
 </head>
 <body>
+<div class="premium-loader" id="premiumLoader" aria-hidden="true">
+<div class="loader-stage">
+<div class="loader-halo"></div>
+<svg class="loader-ring-svg" viewBox="0 0 120 120">
+<defs>
+<linearGradient id="loaderRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#F4D35E"/>
+<stop offset="50%" stop-color="#D4AF37"/>
+<stop offset="100%" stop-color="#B8860B"/>
+</linearGradient>
+</defs>
+<circle class="loader-ring-track" cx="60" cy="60" r="54"></circle>
+<circle class="loader-ring-progress" cx="60" cy="60" r="54"></circle>
+</svg>
+<div class="loader-shield">
+<img src="images/brand/shield-mark.svg" alt="" width="76" height="88">
+<div class="loader-sweep"></div>
+</div>
+</div>
+<div class="loader-brand">Ironclad Tech</div>
+</div>
+<script src="js/loader.js"></script>
 <div class="top-bar">
 <div class="container">
 <div class="top-bar-content">

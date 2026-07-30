@@ -52,6 +52,7 @@
 <link rel="stylesheet" href="css/components.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/loader.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -93,6 +94,28 @@
 </script>
 </head>
 <body>
+<div class="premium-loader" id="premiumLoader" aria-hidden="true">
+<div class="loader-stage">
+<div class="loader-halo"></div>
+<svg class="loader-ring-svg" viewBox="0 0 120 120">
+<defs>
+<linearGradient id="loaderRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#F4D35E"/>
+<stop offset="50%" stop-color="#D4AF37"/>
+<stop offset="100%" stop-color="#B8860B"/>
+</linearGradient>
+</defs>
+<circle class="loader-ring-track" cx="60" cy="60" r="54"></circle>
+<circle class="loader-ring-progress" cx="60" cy="60" r="54"></circle>
+</svg>
+<div class="loader-shield">
+<img src="images/brand/shield-mark.svg" alt="" width="76" height="88">
+<div class="loader-sweep"></div>
+</div>
+</div>
+<div class="loader-brand">Ironclad Tech</div>
+</div>
+<script src="js/loader.js"></script>
 <div class="top-bar">
 <div class="container">
 <div class="top-bar-content">
@@ -214,16 +237,16 @@
 <p class="section-subtitle">Helping organizations improve customer experience, reduce operational costs, and scale efficiently with modern outsourcing solutions.</p>
 </div>
 <div class="col-md-3 fade-in-up">
-<div class="trust-card"><i class="fas fa-user-md trust-icon"></i><h4>Healthcare</h4><p>Medical support, patient services, appointment scheduling and back-office operations.</p></div>
+<div class="trust-card"><i class="fas fa-robot trust-icon"></i><h4>AI-Powered Operations</h4><p>Automation and AI voice technology layered into every service line.</p></div>
 </div>
 <div class="col-md-3 fade-in-up">
-<div class="trust-card"><i class="fas fa-file-medical trust-icon"></i><h4>Insurance</h4><p>ACA, Medicare, Final Expense, Lead Verification and Customer Support.</p></div>
+<div class="trust-card"><i class="fas fa-shield-halved trust-icon"></i><h4>HIPAA-Aware Support</h4><p>Healthcare workflows handled with strict, HIPAA-aware data practices.</p></div>
 </div>
 <div class="col-md-3 fade-in-up">
-<div class="trust-card"><i class="fas fa-headset trust-icon"></i><h4>Customer Support</h4><p>Inbound, Outbound, Live Chat, Email Support and Virtual Assistants.</p></div>
+<div class="trust-card"><i class="fas fa-folder-tree trust-icon"></i><h4>Insurance Back Office</h4><p>ACA, Medicare and Final Expense support built for policy workflows.</p></div>
 </div>
 <div class="col-md-3 fade-in-up">
-<div class="trust-card"><i class="fas fa-robot trust-icon"></i><h4>AI Solutions</h4><p>AI Voice Agents, Automation, Workflow Optimization and Digital Transformation.</p></div>
+<div class="trust-card"><i class="fas fa-headset trust-icon"></i><h4>24/7 Customer Experience</h4><p>Always-on coverage across time zones, without service gaps.</p></div>
 </div>
 </div>
 </div>
@@ -231,7 +254,7 @@
 
 <section class="services-section py-5">
 <div class="container">
-<div class="text-center mb-5 fade-in-up">
+<div class="text-center mb-5 reveal-blur">
 <h2 class="section-title">Our Services</h2>
 <p class="section-subtitle">End-to-end outsourcing solutions designed to help healthcare providers, insurance agencies, and businesses operate more efficiently.</p>
 </div>
@@ -352,7 +375,7 @@
 
 <section class="process-section">
 <div class="container">
-<div class="text-center mb-5 fade-in-up">
+<div class="text-center mb-5 reveal-slide">
 <h2 class="section-title">Our Process</h2>
 <p class="section-subtitle">A simple, transparent workflow that ensures every project is delivered with quality and efficiency.</p>
 </div>
@@ -378,22 +401,24 @@
 
 <section class="stats-section">
 <div class="container">
-<div class="text-center mb-5 fade-in-up">
+<div class="text-center mb-4 reveal-scale">
 <h2 class="section-title">Our Impact</h2>
 <p class="section-subtitle">Delivering measurable results through dedicated teams, technology, and operational excellence.</p>
 </div>
+<div class="text-center mb-5 fade-in-up"><span class="status-badge"><span class="dot"></span>Illustrative Metrics &mdash; Pending Verified Data</span></div>
 <div class="row text-center">
-<div class="col-md-3 fade-in-up"><div class="stat-card"><h2 data-counter="15" data-suffix="+">0+</h2><h5>AI Voice Agents</h5></div></div>
-<div class="col-md-3 fade-in-up"><div class="stat-card"><h2 data-counter="12" data-suffix="+">0+</h2><h5>Expert Verifiers</h5></div></div>
-<div class="col-md-3 fade-in-up"><div class="stat-card"><h2>24/7</h2><h5>Support</h5></div></div>
-<div class="col-md-3 fade-in-up"><div class="stat-card"><h2 data-counter="99" data-suffix="%">0%</h2><h5>Client Satisfaction</h5></div></div>
+<div class="col-md-3 fade-in-up"><div class="stat-card"><h2>[Placeholder]</h2><h5>AI Voice Agents Deployed</h5></div></div>
+<div class="col-md-3 fade-in-up"><div class="stat-card"><h2>[Placeholder]</h2><h5>Expert Verifiers</h5></div></div>
+<div class="col-md-3 fade-in-up"><div class="stat-card"><h2 data-counter="24" data-suffix="/7">24/7</h2><h5>Support Coverage</h5></div></div>
+<div class="col-md-3 fade-in-up"><div class="stat-card"><h2>[Placeholder]</h2><h5>Client Satisfaction</h5></div></div>
 </div>
+<p class="text-center mt-4" style="font-size:.85rem;opacity:.6;max-width:640px;margin-left:auto;margin-right:auto;">Tokens mark real, client-verified figures once available &mdash; no invented stats, consistent with our Case Studies page.</p>
 </div>
 </section>
 
 <section class="industries-section">
 <div class="container">
-<div class="text-center mb-5 fade-in-up">
+<div class="text-center mb-5 reveal-blur">
 <h2 class="section-title">Industries We Serve</h2>
 <p class="section-subtitle">Delivering customized outsourcing solutions across multiple industries.</p>
 </div>
@@ -422,7 +447,7 @@
 
 <section class="testimonial-section">
 <div class="container">
-<div class="text-center mb-5 fade-in-up">
+<div class="text-center mb-5 reveal-scale">
 <h2 class="section-title">What Our Clients Value</h2>
 <p class="section-subtitle">Built on trust, reliability and operational excellence.</p>
 </div>
