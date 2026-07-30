@@ -1,0 +1,31 @@
+# Ironclad Tech
+
+> Ironclad Tech is a Pakistan-based BPO (business process outsourcing) provider delivering Healthcare BPO, Insurance Outsourcing, AI Voice Solutions, Customer Support, Virtual Assistants, Lead Generation, Back Office, and Digital Solutions to businesses worldwide. Teams are dedicated, HIPAA-aware, and typically onboard within two weeks.
+
+## Services
+
+- [Healthcare BPO](https://www.getironcladtech.com/healthcare-bpo): Appointment scheduling, patient support, medical billing assistance and revenue cycle back-office support.
+- [Insurance Outsourcing](https://www.getironcladtech.com/insurance-outsourcing): ACA enrollment, Medicare assistance, Final Expense campaigns, lead verification and policy servicing.
+- [AI Voice Solutions](https://www.getironcladtech.com/ai-voice-solutions): AI voice agents, automation and intelligent call routing for 24/7 customer engagement.
+- [Customer Support](https://www.getironcladtech.com/customer-support): Inbound, outbound, live chat and email support from trained, dedicated agents.
+- [Virtual Assistants](https://www.getironcladtech.com/virtual-assistants): Scheduling, inbox management, research and administrative support.
+- [Lead Generation](https://www.getironcladtech.com/lead-generation): Appointment setting, sales support and business development outsourcing.
+- [Back Office](https://www.getironcladtech.com/back-office): Data entry, CRM management and administrative back-office outsourcing.
+- [Digital Solutions](https://www.getironcladtech.com/digital-solutions): Automation, business process improvement and technology support.
+
+## Company
+
+- [About](https://www.getironcladtech.com/about): Background on Ironclad Tech, a Pakistan-based BPO company.
+- [Services overview](https://www.getironcladtech.com/services): Full outsourcing service line.
+- [Case Studies](https://www.getironcladtech.com/case-studies): Illustrative engagement examples; verified client case studies are in progress and clearly labeled as such.
+- [Security & Compliance](https://www.getironcladtech.com/security-compliance): Data protection practices, including HIPAA-aware handling for healthcare engagements.
+- [Pricing & Engagement Models](https://www.getironcladtech.com/pricing): Dedicated agent, dedicated team and fixed-price project models.
+- [FAQ](https://www.getironcladtech.com/faq): Common questions about onboarding, dedicated teams, QA, data security and pricing.
+- [Careers](https://www.getironcladtech.com/careers): Open positions at Ironclad Tech.
+- [Contact](https://www.getironcladtech.com/contact): Get in touch to discuss an engagement.
+- [Blog](https://www.getironcladtech.com/blog/): Insights on outsourcing, AI-powered support, healthcare BPO and back-office operations.
+
+## Notes
+
+- Ironclad Tech describes its healthcare data handling as "HIPAA-aware," not "HIPAA-compliant."
+- Case study figures are clearly labeled as illustrative examples where real, client-verified results are not yet published. No fabricated statistics are used anywhere on this site.
