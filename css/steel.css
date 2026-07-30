@@ -511,13 +511,14 @@ p{ font-size: 16px; }
     padding: 14px 0;
     font-size: 12px;
 }
+.footer-bottom p{ font-size: 12px; margin: 0; }
 .footer-bottom .container{
     display:flex; flex-wrap:wrap; gap:12px;
     justify-content: space-between; align-items:center;
 }
-/* Copyright line reads right-aligned, legal links on the left */
-.footer-bottom .container > p:not(.footer-legal-links){ order: 2; }
-.footer-legal-links{ order: 1; }
+/* Per the approved design spec: copyright left, legal links right
+   (matches .footer-bottom .container's justify-content:space-between
+   and the markup's natural order, no swap needed). */
 .footer-bottom a{ color: var(--steel-300); }
 .footer-bottom a:hover{ color: var(--signal-light); }
 .footer-legal-links a{ margin-left: 18px; }
