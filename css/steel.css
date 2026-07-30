@@ -244,7 +244,7 @@ p{ font-size: 16px; }
    ========================================================== */
 .service-card, .trust-card, .benefit-card, .value-card, .partner-card,
 .service-detail-card, .industry-card, .testimonial-card, .job-card, .contact-info-card,
-.service-box, .stat-card{
+.service-box, .stat-card, .process-card{
     position: relative;
     background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
     border: var(--glass-border) !important;
@@ -254,7 +254,8 @@ p{ font-size: 16px; }
     transition: transform .35s var(--ease-premium), box-shadow .35s var(--ease-premium), border-color .35s var(--ease-premium);
 }
 .service-card::before, .trust-card::before, .benefit-card::before, .value-card::before,
-.partner-card::before, .service-detail-card::before, .industry-card::before, .service-box::before{
+.partner-card::before, .service-detail-card::before, .industry-card::before, .service-box::before,
+.process-card::before{
     content:"";
     position:absolute; top:0; left:0; right:0; height:3px;
     background: linear-gradient(90deg, var(--signal-dark), var(--signal), var(--signal-light));
@@ -263,14 +264,14 @@ p{ font-size: 16px; }
 }
 .service-card:hover, .trust-card:hover, .benefit-card:hover, .value-card:hover,
 .partner-card:hover, .service-detail-card:hover, .industry-card:hover,
-.service-box:hover, .stat-card:hover{
+.service-box:hover, .stat-card:hover, .process-card:hover{
     border-color: rgba(212,175,55,.45) !important;
     transform: translateY(-6px);
     box-shadow: var(--shadow-elevation-md), var(--shadow-gold-glow) !important;
 }
 .service-card:hover::before, .trust-card:hover::before, .benefit-card:hover::before,
 .value-card:hover::before, .partner-card:hover::before, .service-detail-card:hover::before,
-.industry-card:hover::before{ opacity:1; }
+.industry-card:hover::before, .process-card:hover::before{ opacity:1; }
 
 .service-icon, .trust-icon, .value-card i, .partner-card i, .service-detail-card i,
 .industry-card i, .benefit-card i, .service-box i{ color: var(--signal) !important; }
@@ -568,10 +569,24 @@ p{ font-size: 16px; }
 .page-hero{ padding: 90px 0; }
 
 .trust-card, .service-card, .process-step, .stat-card, .industry-card,
-.testimonial-card, .value-card, .partner-card, .service-box{
+.testimonial-card, .value-card, .partner-card, .service-box, .process-card,
+.benefit-card{
     padding: 28px;
 }
 .service-detail-card{ padding: 28px; }
+.service-box h4, .process-card h5{ font-size: 20px; }
+.process-number{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+    box-shadow: 0 0 0 6px rgba(212,175,55,.08);
+    transition: box-shadow .4s var(--ease-premium), transform .4s var(--ease-premium), background .3s var(--ease-soft);
+}
+.fade-in-up.in-view .process-number{ animation: circleGlowIn .6s var(--ease-premium) both; }
+.process-card:hover .process-number{
+    box-shadow: 0 0 0 8px rgba(212,175,55,.18), var(--shadow-gold-glow);
+    transform: translateY(-2px);
+}
 
 .section-title{
     font-size: 32px;
