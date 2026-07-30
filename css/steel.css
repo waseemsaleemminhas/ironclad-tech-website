@@ -28,6 +28,17 @@ h1, h2, h3, h4, h5, h6,
 body, p, a, li, .btn, input, textarea, select{
     font-family: 'Inter', 'Poppins', sans-serif;
 }
+/* Type scale (compact): Body 16px/400 - the base stylesheet sets a
+   global p{font-size:22px}, which is what card/body copy sitewide was
+   still inheriting. Low-specificity override here so anything with
+   its own more specific rule (.hero-lead, .cta-section p, etc.) wins. */
+p{ font-size: 16px; }
+/* Type scale (compact): H3 card title 20px/700, applied to whichever
+   heading level each card variant happens to use. */
+.trust-card h4, .service-card h4, .feature-item h5, .process-step h5,
+.industry-card h4, .testimonial-card h5, .value-card h4, .service-detail-card h3{
+    font-size: 20px;
+}
 
 /* ---- Signal accent text (animated gold shimmer on key accents) ---- */
 .gold-text, .logo-gold{
@@ -208,6 +219,16 @@ body, p, a, li, .btn, input, textarea, select{
     -webkit-backdrop-filter: blur(6px);
     backdrop-filter: blur(6px);
     box-shadow: 0 4px 16px rgba(212,175,55,.15);
+    font-size: 14px;
+}
+/* True "eyebrow" tags (short category labels, e.g. "Healthcare BPO")
+   get the spec's 12px/700/uppercase treatment. .hero-badge wraps a
+   full sentence on the homepage/about hero, so it stays sentence-case. */
+.eyebrow{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .05em;
 }
 .hero-badge::before, .eyebrow::before{
     content:"";
@@ -223,7 +244,7 @@ body, p, a, li, .btn, input, textarea, select{
    ========================================================== */
 .service-card, .trust-card, .benefit-card, .value-card, .partner-card,
 .service-detail-card, .industry-card, .testimonial-card, .job-card, .contact-info-card,
-.stat-card{
+.service-box, .stat-card{
     position: relative;
     background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.015));
     border: var(--glass-border) !important;
@@ -233,7 +254,7 @@ body, p, a, li, .btn, input, textarea, select{
     transition: transform .35s var(--ease-premium), box-shadow .35s var(--ease-premium), border-color .35s var(--ease-premium);
 }
 .service-card::before, .trust-card::before, .benefit-card::before, .value-card::before,
-.partner-card::before, .service-detail-card::before, .industry-card::before{
+.partner-card::before, .service-detail-card::before, .industry-card::before, .service-box::before{
     content:"";
     position:absolute; top:0; left:0; right:0; height:3px;
     background: linear-gradient(90deg, var(--signal-dark), var(--signal), var(--signal-light));
@@ -242,7 +263,7 @@ body, p, a, li, .btn, input, textarea, select{
 }
 .service-card:hover, .trust-card:hover, .benefit-card:hover, .value-card:hover,
 .partner-card:hover, .service-detail-card:hover, .industry-card:hover,
-.stat-card:hover{
+.service-box:hover, .stat-card:hover{
     border-color: rgba(212,175,55,.45) !important;
     transform: translateY(-6px);
     box-shadow: var(--shadow-elevation-md), var(--shadow-gold-glow) !important;
@@ -252,7 +273,7 @@ body, p, a, li, .btn, input, textarea, select{
 .industry-card:hover::before{ opacity:1; }
 
 .service-icon, .trust-icon, .value-card i, .partner-card i, .service-detail-card i,
-.industry-card i, .benefit-card i{ color: var(--signal) !important; }
+.industry-card i, .benefit-card i, .service-box i{ color: var(--signal) !important; }
 
 /* ---- Nav link underline sweep (generic, non-header nav-links) ---- */
 .nav-link{ position: relative; }
@@ -542,7 +563,7 @@ body, p, a, li, .btn, input, textarea, select{
 .page-hero{ padding: 90px 0; }
 
 .trust-card, .service-card, .process-step, .stat-card, .industry-card,
-.testimonial-card, .value-card{
+.testimonial-card, .value-card, .partner-card, .service-box{
     padding: 28px;
 }
 .service-detail-card{ padding: 28px; }
@@ -557,9 +578,13 @@ body, p, a, li, .btn, input, textarea, select{
     margin-bottom: 40px;
 }
 
-.trust-icon, .service-icon, .industry-card > i, .value-card > i, .service-detail-card > i{
+.trust-icon, .service-icon, .industry-card > i, .value-card > i, .service-detail-card > i,
+.partner-card > i, .service-box > i{
     font-size: 32px;
     margin-bottom: 14px;
+}
+.stats-section .counter{
+    font-size: 40px;
 }
 .feature-item i{
     width: 52px;
@@ -576,10 +601,14 @@ body, p, a, li, .btn, input, textarea, select{
     line-height: 1.1;
     white-space: nowrap;
 }
-.page-hero h1{ font-size: 40px; }
+.page-hero h1, .hero h1{ font-size: 46px; }
+.hero p{ font-size: 18px; }
+.detail-hero{ padding: 80px 0 56px; }
 .about-cta h2{ font-size: 32px; }
+.about-cta p{ font-size: 17px; }
 .cta-section h2{ font-size: 32px; }
 .cta-section p{ font-size: 17px; }
+.feature-list li{ font-size: 16px; }
 
 /* Outer .footer padding is legacy (style.css); footer-main/footer-cta/
    footer-bottom already carry their own compact padding, so zero this
