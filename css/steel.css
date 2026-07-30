@@ -524,6 +524,68 @@ body, p, a, li, .btn, input, textarea, select{
     .footer-legal-links a{ margin: 0 8px; }
 }
 
+/* ==========================================================
+   COMPACT SPACING SYSTEM
+   The base stylesheets (style.css/about.css/services.css/home.css)
+   still ship the old oversized paddings/type sizes. This section
+   is the actual "compact layout" pass from the brief - loads after
+   those files so it wins on desktop, but has no !important so
+   responsive.css's mobile-specific rules (loaded even later) still
+   take over at small breakpoints as intended.
+   ========================================================== */
+.trusted-section, .services-section, .why-us, .process-section, .stats-section,
+.industries-section, .testimonial-section, .about-company, .values-section,
+.services-overview{
+    padding: 64px 0;
+}
+.cta-section, .about-cta{ padding: 64px 0; }
+.page-hero{ padding: 90px 0; }
+
+.trust-card, .service-card, .process-step, .stat-card, .industry-card,
+.testimonial-card, .value-card{
+    padding: 28px;
+}
+.service-detail-card{ padding: 28px; }
+
+.section-title{
+    font-size: 32px;
+    margin-bottom: 12px;
+    padding-bottom: 14px;
+}
+.section-subtitle{
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.trust-icon, .service-icon, .industry-card > i, .value-card > i, .service-detail-card > i{
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+.feature-item i{
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+}
+.process-circle{
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+}
+.stat-card h2{
+    font-size: 40px;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+.page-hero h1{ font-size: 40px; }
+.about-cta h2{ font-size: 32px; }
+.cta-section h2{ font-size: 32px; }
+.cta-section p{ font-size: 17px; }
+
+/* Outer .footer padding is legacy (style.css); footer-main/footer-cta/
+   footer-bottom already carry their own compact padding, so zero this
+   out rather than stacking both. */
+.footer{ padding: 0; }
+
 @media (prefers-reduced-motion: reduce){
     .status-badge .dot, .hero-badge::before, .eyebrow::before,
     .hero-section::before, .hero::before, .detail-hero::before, .why-us::before, .cta-section::before, .about-cta::before,
