@@ -197,6 +197,22 @@
     transform:translateY(-3px);
 }
 
+/* ---- Social engagement (Facebook Like) + Comments ---- */
+.social-engagement-row{
+    margin:0 0 32px;
+}
+.comments-block{
+    margin:0 0 40px;
+    padding-top:28px;
+    border-top:1px solid #E5E7EB;
+}
+.comments-heading{
+    font-weight:700;
+    color:var(--primary-dark);
+    margin-bottom:16px;
+    font-size:18px;
+}
+
 /* ---- Author box ---- */
 .author-box{
     display:flex;
