@@ -54,7 +54,7 @@
 }
 .deliverable-row:hover .deliverable-icon{ transform:scale(1.08) rotate(-4deg); }
 .deliverable-icon i{ color:var(--signal); font-size:20px; }
-.deliverable-row h5{ font-weight:700; color:var(--graphite-950); margin-bottom:6px; }
+.deliverable-row h3{ font-weight:700; color:var(--graphite-950); margin-bottom:6px; }
 .deliverable-row p{ color:var(--gray); margin:0; font-size:15px; }
 
 /* ---- FAQ accordion ---- */

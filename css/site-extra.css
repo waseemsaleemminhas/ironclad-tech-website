@@ -249,7 +249,7 @@
 }
 .benefit-card.stacked{ height:auto; }
 .benefit-card i{ font-size:30px; color:var(--primary); margin-bottom:16px; }
-.benefit-card h5{ font-weight:700; color:var(--primary-dark); margin-bottom:10px; }
+.benefit-card h3{ font-weight:700; color:var(--primary-dark); margin-bottom:10px; }
 .benefit-card p{ color:var(--gray); margin:0; font-size:15px; }
 
 /* ---- Forms (Contact / Quote) ---- */
@@ -300,7 +300,7 @@
     font-size:20px;
 }
 .contact-info-card > div{ min-width:0; }
-.contact-info-card h5{ font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
+.contact-info-card h3{ font-weight:700; color:var(--primary-dark); margin-bottom:4px; }
 .contact-info-card p{ margin:0; color:var(--gray); overflow-wrap:break-word; }
 .contact-info-card a{ color:var(--gray); text-decoration:none; }
 .contact-info-card a:hover{ color:var(--primary); }
@@ -348,11 +348,12 @@
     transition:var(--transition);
 }
 .job-card:hover{ box-shadow:var(--shadow-md); transform:translateY(-3px); }
-.job-card h5{ font-weight:700; color:var(--primary-dark); margin-bottom:6px; }
+.job-card h3{ font-weight:700; color:var(--primary-dark); margin-bottom:6px; }
 .job-card .job-meta{ color:var(--gray); font-size:14px; }
 .job-card .job-meta i{ color:var(--gold-dark); margin-right:5px; }
 .culture-card{ text-align:center; padding:26px 16px; }
 .culture-card i{ font-size:34px; color:var(--gold-dark); margin-bottom:14px; }
+.culture-card h3{ font-weight:700; margin-bottom:8px; }
 
 /* ---- 404 ---- */
 .error-page{
