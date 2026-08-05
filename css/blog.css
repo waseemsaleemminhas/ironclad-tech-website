@@ -41,7 +41,7 @@
 .blog-card-tag{
     display:inline-block;
     background:rgba(212,175,55,.15);
-    color:var(--gold-dark);
+    color:var(--gold-text-safe);
     padding:5px 14px;
     border-radius:50px;
     font-size:12px;
@@ -78,7 +78,7 @@
     text-decoration:none;
 }
 .blog-card-link i{ margin-left:6px; transition:var(--transition); }
-.blog-card-link:hover{ color:var(--gold-dark); }
+.blog-card-link:hover{ color:var(--gold-text-safe); }
 .blog-card-link:hover i{ transform:translateX(4px); }
 .blog-card a.blog-card-cover{ display:block; text-decoration:none; }
 

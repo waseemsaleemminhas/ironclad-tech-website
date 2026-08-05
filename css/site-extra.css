@@ -4,6 +4,26 @@
    careers, breadcrumbs, service detail pages
    ========================================== */
 
+/* ---- Skip link (keyboard/screen-reader users bypass nav) ---- */
+.skip-link{
+    position:absolute;
+    top:-60px;
+    left:12px;
+    z-index:100001;
+    background:var(--primary-dark);
+    color:#fff;
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    transition:top .2s ease;
+}
+.skip-link:focus{
+    top:12px;
+    color:#fff;
+}
+
 /* ---- Icon Hero Visual (replaces missing photography) ---- */
 .icon-visual{
     position:relative;

@@ -15,6 +15,7 @@
     --gold: #D4AF37;
     --gold-light: #F4D35E;
     --gold-dark: #B8860B;
+    --gold-text-safe: #7A5C00; /* WCAG AA text-on-light variant; --gold-dark alone fails 4.5:1 as text */
 
     /* ===== Neutral ===== */
 

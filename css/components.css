@@ -140,7 +140,7 @@
     align-items:center;
     gap:8px;
     background:rgba(212,175,55,.12);
-    color:var(--signal-dark);
+    color:var(--gold-text-safe);
     padding:6px 14px;
     border-radius:50px;
     font-size:13px;
@@ -159,7 +159,7 @@
     text-transform:uppercase;
     letter-spacing:.07em;
     font-size:12px;
-    color:var(--signal-dark);
+    color:var(--gold-text-safe);
     font-weight:700;
     margin-bottom:10px;
 }
