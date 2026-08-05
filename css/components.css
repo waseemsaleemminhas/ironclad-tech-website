@@ -107,11 +107,12 @@
 
 /* ---- Case study cards ---- */
 .case-card{
-    background:#fff;
-    border:1px solid var(--steel-100);
+    background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+    border: var(--glass-border);
     border-left:4px solid var(--signal);
-    border-radius:var(--radius);
-    padding:38px;
+    border-radius:var(--card-radius);
+    box-shadow: var(--shadow-elevation-sm);
+    padding:28px;
     margin-bottom:28px;
     transition:transform .3s ease, box-shadow .3s ease;
 }
@@ -150,6 +151,7 @@
 .case-card h3{
     color:var(--graphite-950);
     font-weight:700;
+    font-size:20px;
     margin-bottom:24px;
 }
 .case-card h6{
@@ -187,10 +189,11 @@
 /* ---- Pricing cards ---- */
 .pricing-card{
     position:relative;
-    background:#fff;
-    border:1px solid var(--steel-100);
-    border-radius:var(--radius);
-    padding:38px 32px;
+    background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+    border: var(--glass-border);
+    border-radius:var(--card-radius);
+    box-shadow: var(--shadow-elevation-sm);
+    padding:28px;
     height:100%;
     display:flex;
     flex-direction:column;
@@ -227,7 +230,7 @@
     margin-bottom:20px;
 }
 .pricing-icon i{ color:var(--signal); font-size:26px; }
-.pricing-card h3{ color:var(--graphite-950); font-weight:700; margin-bottom:6px; }
+.pricing-card h3{ color:var(--graphite-950); font-weight:700; font-size:20px; margin-bottom:6px; }
 .pricing-tagline{ color:var(--gray); margin-bottom:20px; font-size:15px; }
 .pricing-card .check-list{ margin:0 0 26px; flex-grow:1; }
 .pricing-card .check-list li{ font-size:15px; padding:7px 0; }
@@ -257,8 +260,6 @@
 
 @media (max-width: 767.98px){
     .hero-stat-row{ gap:22px; justify-content:center; }
-    .case-card{ padding:26px; }
-    .pricing-card{ padding:30px 24px; }
 }
 
 @media (prefers-reduced-motion: reduce){
