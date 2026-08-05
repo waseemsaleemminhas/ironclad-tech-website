@@ -4,18 +4,20 @@
 
 /* ---- Blog listing grid ---- */
 .blog-card{
-    background:#fff;
-    border-radius:var(--radius);
+    background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+    border: var(--glass-border);
+    border-radius:var(--card-radius);
     overflow:hidden;
     height:100%;
-    box-shadow:var(--shadow-sm);
+    box-shadow: var(--shadow-elevation-sm);
     transition:var(--transition);
     display:flex;
     flex-direction:column;
 }
 .blog-card:hover{
     transform:translateY(-6px);
-    box-shadow:var(--shadow-md);
+    border-color: rgba(212,175,55,.45);
+    box-shadow: var(--shadow-elevation-md), var(--shadow-gold-glow);
 }
 .blog-card-img{
     background:linear-gradient(145deg, var(--primary) 0%, var(--primary-dark) 100%);
