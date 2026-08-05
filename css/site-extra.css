@@ -234,10 +234,11 @@
 
 /* ---- Forms (Contact / Quote) ---- */
 .form-panel{
-    background:#fff;
-    border-radius:var(--radius);
+    background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+    border: var(--glass-border);
+    border-radius:var(--card-radius);
     padding:44px;
-    box-shadow:var(--shadow-md);
+    box-shadow: var(--shadow-elevation-sm);
 }
 .form-panel h3{ color:var(--primary-dark); font-weight:700; margin-bottom:8px; }
 .form-panel .form-sub{ color:var(--gray); margin-bottom:28px; }

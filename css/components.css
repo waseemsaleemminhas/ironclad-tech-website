@@ -30,17 +30,18 @@
     display:flex;
     gap:18px;
     align-items:flex-start;
-    background:#fff;
-    border:1px solid var(--steel-100);
-    border-radius:var(--radius);
-    padding:26px;
+    background: linear-gradient(160deg, rgba(255,255,255,.05), rgba(255,255,255,.016));
+    border: var(--glass-border);
+    border-radius:var(--card-radius);
+    box-shadow: var(--shadow-elevation-sm);
+    padding:28px;
     height:100%;
     transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
 }
 .deliverable-row:hover{
     transform:translateY(-4px);
-    border-color:var(--signal);
-    box-shadow:0 12px 30px rgba(8,27,58,.08);
+    border-color: rgba(212,175,55,.45);
+    box-shadow: var(--shadow-elevation-md), var(--shadow-gold-glow);
 }
 .deliverable-icon{
     width:54px; height:54px; min-width:54px;
