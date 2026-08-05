@@ -36,7 +36,8 @@ p{ font-size: 16px; }
 /* Type scale (compact): H3 card title 20px/700, applied to whichever
    heading level each card variant happens to use. */
 .trust-card h4, .service-card h4, .feature-item h5, .process-step h5,
-.industry-card h4, .testimonial-card h5, .value-card h4, .service-detail-card h3{
+.industry-card h4, .testimonial-card h5, .value-card h4, .service-detail-card h3,
+.partner-card h4{
     font-size: 20px;
 }
 
