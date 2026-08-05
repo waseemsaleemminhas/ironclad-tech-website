@@ -233,5 +233,5 @@
     color:var(--gold);
     font-size:22px;
 }
-.author-box h5{ font-weight:700; color:var(--primary-dark); margin-bottom:2px; }
+.author-box .author-name{ font-weight:700; color:var(--primary-dark); margin-bottom:2px; }
 .author-box p{ margin:0; color:var(--gray); font-size:14px; }

@@ -633,7 +633,7 @@ color:white;
 }
 
 .footer h3,
-.footer h5{
+.footer .footer-col-title{
 
 color:var(--gold);
 
@@ -1129,7 +1129,7 @@ border-top:1px solid rgba(255,255,255,.18);
 
 }
 
-.hero-stats h3{
+.hero-stats .hero-stat-value{
 
 color:var(--gold);
 

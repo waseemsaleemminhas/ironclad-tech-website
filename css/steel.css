@@ -36,10 +36,16 @@ p{ font-size: 16px; }
 /* Type scale (compact): H3 card title 20px/700, applied to whichever
    heading level each card variant happens to use. */
 .trust-card h3, .service-card h3, .feature-item h3, .process-step h3,
-.industry-card h3, .testimonial-card h5, .value-card h3, .service-detail-card h3,
+.industry-card h3, .testimonial-card .testimonial-author, .value-card h3, .service-detail-card h3,
 .partner-card h3, .benefit-card h3, .job-card h3, .contact-info-card h3,
 .deliverable-row h3, .culture-card h3{
     font-size: 20px;
+}
+/* .testimonial-author is a <p>, not a heading - needs the bold weight
+   it would have gotten for free from a heading tag's browser default. */
+.testimonial-card .testimonial-author{
+    font-weight: 700;
+    color: var(--primary-dark);
 }
 
 /* ---- Signal accent text (animated gold shimmer on key accents) ---- */
@@ -59,11 +65,11 @@ p{ font-size: 16px; }
 }
 
 /* ---- Tabular / monospace stat readouts ---- */
-.stat-card h2, .stats-section .counter, .hero-stats h3{
+.stat-card h2, .stats-section .counter, .hero-stats .hero-stat-value{
     font-variant-numeric: tabular-nums;
     color: var(--signal);
 }
-.stat-card h2.counted, .hero-stats h3.counted{
+.stat-card h2.counted, .hero-stats .hero-stat-value.counted{
     animation: statPulse .6s var(--ease-premium);
 }
 @keyframes statPulse{
@@ -458,7 +464,7 @@ p{ font-size: 16px; }
 .footer-brand-mark .logo-blue{ color:#fff; }
 .footer .footer-tagline{ color: var(--steel-300); max-width: 280px; margin-bottom: 16px; text-align: left; font-size: 13px; }
 .footer .social-row{ justify-content: flex-start; }
-.footer h5{
+.footer .footer-col-title{
     color: #fff;
     font-weight: 700;
     font-size: 11px;
@@ -468,7 +474,7 @@ p{ font-size: 16px; }
     position: relative;
     padding-bottom: 8px;
 }
-.footer h5::after{
+.footer .footer-col-title::after{
     content:"";
     position:absolute; left:0; bottom:0;
     width: 28px; height: 2px;

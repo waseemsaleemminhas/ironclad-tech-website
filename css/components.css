@@ -11,7 +11,7 @@
     margin-top:34px;
     flex-wrap:wrap;
 }
-.hero-stat-item h3{
+.hero-stat-item .hero-stat-value{
     color:var(--signal);
     font-weight:700;
     margin-bottom:2px;
@@ -155,7 +155,7 @@
     font-size:20px;
     margin-bottom:24px;
 }
-.case-card h6{
+.case-card h4{
     text-transform:uppercase;
     letter-spacing:.07em;
     font-size:12px;
@@ -165,7 +165,7 @@
 }
 .case-card p{ color:#374151; font-size:15px; }
 .result-stats{ display:flex; flex-direction:column; gap:14px; }
-.result-stat h3{
+.result-stat .result-stat-label{
     color:var(--signal);
     font-weight:700;
     margin:0;
