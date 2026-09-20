@@ -53,6 +53,7 @@
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/loader.css">
+<link rel="stylesheet" href="css/testimonials.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -145,6 +146,7 @@
 <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
 <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
 <li class="nav-item"><a class="nav-link" href="/services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="/testimonials">Testimonials</a></li>
 <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
 <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
 <li class="nav-item ms-lg-3">
@@ -437,10 +439,13 @@
 <h2 class="section-title">What Our Clients Value</h2>
 <p class="section-subtitle">Built on trust, reliability and operational excellence.</p>
 </div>
-<div class="row g-4">
+<div class="row g-4" id="ictHomeReviewsGrid">
 <div class="col-md-4 fade-in-up"><div class="testimonial-card"><p>"Professional, responsive and committed to delivering quality support."</p><p class="testimonial-author">Healthcare Client</p></div></div>
 <div class="col-md-4 fade-in-up"><div class="testimonial-card"><p>"A dependable outsourcing partner that helped improve efficiency."</p><p class="testimonial-author">Insurance Partner</p></div></div>
 <div class="col-md-4 fade-in-up"><div class="testimonial-card"><p>"Strong communication, excellent execution and scalable teams."</p><p class="testimonial-author">Business Client</p></div></div>
+</div>
+<div class="text-center mt-4">
+<a href="/testimonials" class="btn btn-outline-dark">See All Client Stories</a>
 </div>
 </div>
 </section>
@@ -482,6 +487,7 @@
 <li><a href="/about">About Us</a></li>
 <li><a href="/services">Services</a></li>
 <li><a href="/case-studies">Case Studies</a></li>
+<li><a href="/testimonials">Testimonials</a></li>
 <li><a href="/pricing">Pricing</a></li>
 <li><a href="/security-compliance">Security</a></li>
 <li><a href="/faq">FAQ</a></li>
@@ -533,6 +539,32 @@
 <script src="js/script.js"></script>
 <script src="js/animations.js"></script>
 <script src="js/counter.js"></script>
+<script src="js/testimonials.js"></script>
+<script>
+(function () {
+  function cardHtml(r) {
+    var who = r.name ? (ictEscape(r.name) + (r.title ? ', ' + ictEscape(r.title) : '')) : ictEscape(r.company || 'Ironclad Tech Client');
+    return (
+      '<div class="col-md-4 fade-in-up">' +
+        '<div class="testimonial-card">' +
+          '<div class="ict-card-top">' +
+            '<div class="ict-stars">' + ictStarsHtml(r.rating || 5) + '</div>' +
+            (r.name ? '<span class="ict-verified"><i class="fas fa-circle-check"></i>Verified</span>' : '') +
+          '</div>' +
+          '<p class="ict-quote">&ldquo;' + ictEscape(r.body) + '&rdquo;</p>' +
+          '<p class="testimonial-author mb-0">' + who + '</p>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+  // Only swap the static examples above for real ones once at least 3 are approved.
+  ictFetchReviews().then(function (list) {
+    if (list && list.length >= 3) {
+      document.getElementById('ictHomeReviewsGrid').innerHTML = list.slice(0, 3).map(cardHtml).join('');
+    }
+  });
+})();
+</script>
 <script src="js/hero-parallax.js"></script>
 </body>
 </html>

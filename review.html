@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb#">
+<head>
+<meta charset="UTF-8">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BH1PKVVEQD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BH1PKVVEQD');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leave a Review | Ironclad Tech</title>
+<meta name="description" content="Share your experience working with Ironclad Tech.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.getironcladtech.com/review">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon/favicon-192.png">
+<link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/site-extra.css">
+<link rel="stylesheet" href="css/steel.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/loader.css">
+<link rel="stylesheet" href="css/testimonials.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="top-bar">
+<div class="container">
+<div class="top-bar-content">
+<div class="top-left">
+<a href="tel:+923110271554"><i class="fas fa-phone"></i> +92 311 0271554</a>
+<a href="mailto:info@getironcladtech.com"><i class="fas fa-envelope"></i> info@getironcladtech.com</a>
+</div>
+<div class="top-right">
+<a href="https://www.linkedin.com/company/ironclad-tech/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+<a href="https://www.facebook.com/IroncladTech" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+</div>
+</div>
+</div>
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+<div class="container">
+<a class="navbar-brand fw-bold d-flex align-items-center" href="/">
+<img src="images/logo/ironclad-logo@2x.png" alt="Ironclad Tech" class="navbar-logo-img">
+</a>
+</div>
+</nav>
+<main id="main-content">
+<section class="py-5" style="padding-top:60px; padding-bottom:100px; background:#F8FAFC; min-height:60vh;">
+<div class="container">
+
+<div class="ict-review-panel" id="ictCheckingState">
+<div class="ict-state">
+<i class="fas fa-circle-notch fa-spin"></i>
+<h2>Checking your invite&hellip;</h2>
+<p class="mb-0">One moment while we confirm this link.</p>
+</div>
+</div>
+
+<div class="ict-review-panel" id="ictInvalidState" hidden>
+<div class="ict-state">
+<i class="fas fa-circle-exclamation"></i>
+<h2 id="ictInvalidHeadline">This link isn't valid</h2>
+<p class="mb-3">If you think this is a mistake, email us at <a href="mailto:info@getironcladtech.com">info@getironcladtech.com</a> and we'll sort it out.</p>
+<a href="/" class="btn btn-outline-dark">Back to homepage</a>
+</div>
+</div>
+
+<div class="ict-review-panel" id="ictFormState" hidden>
+<div class="text-center mb-4">
+<span class="eyebrow">Leave a Review</span>
+<h2 id="ictGreeting" style="font-size:24px; margin-top:6px;">Thanks for working with Ironclad Tech</h2>
+</div>
+<div class="form-status mb-3" id="ictFormStatus"></div>
+<form id="ictReviewForm">
+<label>Your rating</label>
+<div class="ict-star-picker" id="ictStarPicker" role="radiogroup" aria-label="Star rating">
+<button type="button" data-v="1" aria-label="1 star">&#9733;</button>
+<button type="button" data-v="2" aria-label="2 stars">&#9733;</button>
+<button type="button" data-v="3" aria-label="3 stars">&#9733;</button>
+<button type="button" data-v="4" aria-label="4 stars">&#9733;</button>
+<button type="button" data-v="5" aria-label="5 stars">&#9733;</button>
+</div>
+<label for="ictBody">Your review</label>
+<textarea class="form-control" id="ictBody" maxlength="600" rows="5" required placeholder="Tell us how your engagement with Ironclad Tech went&hellip;"></textarea>
+<div class="ict-charcount"><span id="ictCharN">0</span>/600</div>
+<button type="submit" class="btn btn-warning btn-lg mt-3" id="ictSubmitBtn">Submit review</button>
+<p class="form-note mt-3">Your review is checked against our records to confirm you're a real Ironclad Tech client, then held for our team's approval before it appears on the site.</p>
+</form>
+</div>
+
+<div class="ict-review-panel" id="ictThanksState" hidden>
+<div class="ict-state">
+<i class="fas fa-circle-check"></i>
+<h2>Thank you</h2>
+<p class="mb-0">Your review has been received and is waiting on our team's approval before it goes live. We appreciate you taking the time.</p>
+</div>
+</div>
+
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="footer-bottom">
+<div class="container">
+<p class="mb-0">&copy; 2026 Ironclad Tech&trade;. All Rights Reserved.</p>
+<p class="mb-0 footer-legal-links">
+<a href="/privacy">Privacy Policy</a>
+<a href="/terms">Terms of Service</a>
+</p>
+</div>
+</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/testimonials.js"></script>
+<script>
+(function () {
+  var states = {
+    checking: document.getElementById('ictCheckingState'),
+    invalid: document.getElementById('ictInvalidState'),
+    form: document.getElementById('ictFormState'),
+    thanks: document.getElementById('ictThanksState')
+  };
+  function show(name) {
+    Object.keys(states).forEach(function (k) { states[k].hidden = (k !== name); });
+  }
+
+  var params = new URLSearchParams(window.location.search);
+  var token = params.get('token');
+
+  if (!token) {
+    document.getElementById('ictInvalidHeadline').textContent = 'This link is missing its invite code';
+    show('invalid');
+    return;
+  }
+
+  ictVerifyToken(token).then(function (res) {
+    if (!res || !res.valid) {
+      if (res && res.reason === 'already-submitted') {
+        document.getElementById('ictInvalidHeadline').textContent = "You've already submitted a review";
+      }
+      show('invalid');
+      return;
+    }
+    var greeting = document.getElementById('ictGreeting');
+    if (res.name) {
+      greeting.textContent = 'Hi ' + res.name + (res.company ? ', thanks for working with us on ' + res.company : ', thanks for working with Ironclad Tech');
+    }
+    show('form');
+  }).catch(function () { show('invalid'); });
+
+  var rating = 0;
+  var picker = document.getElementById('ictStarPicker');
+  picker.addEventListener('click', function (e) {
+    var btn = e.target.closest('button');
+    if (!btn) return;
+    rating = parseInt(btn.dataset.v, 10);
+    Array.prototype.forEach.call(picker.querySelectorAll('button'), function (b) {
+      b.classList.toggle('on', parseInt(b.dataset.v, 10) <= rating);
+    });
+  });
+
+  var textarea = document.getElementById('ictBody');
+  var charN = document.getElementById('ictCharN');
+  textarea.addEventListener('input', function () { charN.textContent = textarea.value.length; });
+
+  document.getElementById('ictReviewForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var status = document.getElementById('ictFormStatus');
+    var btn = document.getElementById('ictSubmitBtn');
+    if (!rating) {
+      status.textContent = 'Please choose a star rating.';
+      status.className = 'form-status error';
+      return;
+    }
+    if (!textarea.value.trim()) {
+      status.textContent = 'Please write a few words about your experience.';
+      status.className = 'form-status error';
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
+    ictSubmitReview(token, rating, textarea.value.trim()).then(function (res) {
+      if (res && res.ok) {
+        show('thanks');
+      } else {
+        status.textContent = 'Something went wrong. Please email us directly at info@getironcladtech.com.';
+        status.className = 'form-status error';
+        btn.disabled = false;
+        btn.textContent = 'Submit review';
+      }
+    }).catch(function () {
+      status.textContent = 'Something went wrong. Please email us directly at info@getironcladtech.com.';
+      status.className = 'form-status error';
+      btn.disabled = false;
+      btn.textContent = 'Submit review';
+    });
+  });
+})();
+</script>
+</body>
+</html>
