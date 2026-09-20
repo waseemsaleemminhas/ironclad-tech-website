@@ -2,7 +2,7 @@
 // After deploying the Apps Script backend (apps-script/testimonials.gs) as a
 // Web App, paste its /exec URL below. Until then, this points at nothing and
 // every page using it just shows its built-in fallback/empty state.
-window.IRONCLAD_REVIEWS_API = 'REPLACE_WITH_YOUR_APPS_SCRIPT_EXEC_URL';
+window.IRONCLAD_REVIEWS_API = 'https://script.google.com/macros/s/AKfycbwl6Dzdp8SRCVEm4-9yOh-b6I4SgIuqsxhZ5skng1yaETYrnr853IA903l-XIHtpY6-/exec';
 
 function ictApiReady() {
   return window.IRONCLAD_REVIEWS_API && window.IRONCLAD_REVIEWS_API.indexOf('REPLACE_WITH') !== 0;
