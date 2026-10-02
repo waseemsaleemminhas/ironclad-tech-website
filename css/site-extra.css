@@ -375,3 +375,181 @@
     .fade-in-up{ opacity:1; transform:none; transition:none; }
     .icon-visual::before{ animation:none; }
 }
+
+/* ---- Application form (/apply) ---- */
+.req-star{ color:#B3261E; font-weight:700; }
+.optional-tag{
+    font-size:12px;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--gold-text-safe);
+    background:rgba(212,175,55,.14);
+    padding:3px 9px;
+    border-radius:999px;
+    vertical-align:middle;
+    margin-left:6px;
+}
+.form-section-head{
+    font-size:17px;
+    font-weight:700;
+    color:var(--primary-dark);
+    margin:34px 0 14px;
+    padding-top:18px;
+    border-top:1px solid #E5E7EB;
+}
+.form-section-head:first-of-type{ margin-top:8px; padding-top:0; border-top:0; }
+.field-hint{ display:block; color:var(--gray); font-size:12.5px; margin-top:5px; }
+.field-hint a{ color:var(--primary); }
+
+.form-panel .form-control.is-invalid{ border-color:#B3261E; background:#FEF6F5; }
+.form-panel .field-error{ display:block; color:#B3261E; font-size:12.5px; margin-top:5px; font-weight:600; }
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:8px 18px;
+    margin:4px 0 10px;
+}
+.checkbox-grid label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:500;
+    font-size:14px;
+    color:var(--dark);
+    margin:0;
+    cursor:pointer;
+}
+.checkbox-grid input{ width:17px; height:17px; accent-color:var(--gold-dark); flex:0 0 auto; }
+
+.voice-box{
+    background:var(--light);
+    border:1px solid #E5E7EB;
+    border-left:4px solid var(--gold);
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:10px;
+}
+.voice-script{
+    background:var(--white);
+    border:1px dashed #D1D5DB;
+    border-radius:10px;
+    padding:16px 18px;
+    margin:0 0 16px;
+    font-size:15px;
+    line-height:1.7;
+    color:var(--dark);
+    font-style:italic;
+}
+.voice-controls{ display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:6px; }
+.voice-controls .btn{ flex:0 0 auto; }
+.rec-timer{
+    font-variant-numeric:tabular-nums;
+    font-weight:700;
+    color:#B3261E;
+    font-size:16px;
+}
+.rec-timer::before{
+    content:"";
+    display:inline-block;
+    width:9px; height:9px;
+    border-radius:50%;
+    background:#B3261E;
+    margin-right:7px;
+    vertical-align:middle;
+    animation:recPulse 1.1s ease-in-out infinite;
+}
+@keyframes recPulse{ 0%,100%{ opacity:1; } 50%{ opacity:.25; } }
+@media (prefers-reduced-motion: reduce){ .rec-timer::before{ animation:none; } }
+
+.consent-row{ margin:26px 0 6px; }
+.consent-label{
+    display:flex;
+    gap:11px;
+    align-items:flex-start;
+    font-weight:400 !important;
+    font-size:13.5px !important;
+    line-height:1.6;
+    color:var(--gray);
+    cursor:pointer;
+}
+.consent-label input{ width:18px; height:18px; margin-top:2px; accent-color:var(--gold-dark); flex:0 0 auto; }
+.consent-label a{ color:var(--primary); }
+
+/* Spam trap: must stay reachable to a bot's parser but invisible to people. */
+.hp-field{
+    position:absolute !important;
+    left:-9999px !important;
+    width:1px; height:1px;
+    overflow:hidden;
+}
+
+.apply-aside{
+    background:var(--primary-dark);
+    color:rgba(255,255,255,.82);
+    border-radius:var(--radius);
+    padding:26px 28px;
+    margin-top:26px;
+}
+.apply-aside h4{ color:var(--white); font-weight:700; font-size:17px; margin-bottom:14px; }
+.apply-aside ol{ padding-left:20px; margin-bottom:16px; }
+.apply-aside li{ margin-bottom:7px; font-size:14.5px; }
+.apply-aside .field-hint{ color:rgba(255,255,255,.6); }
+.apply-aside a{ color:var(--gold-light); }
+
+/* ---- Featured vacancy block on /careers ---- */
+.featured-role{
+    background:var(--white);
+    border:1px solid #E5E7EB;
+    border-top:4px solid var(--gold);
+    border-radius:var(--radius);
+    padding:34px;
+    box-shadow:var(--shadow-sm);
+}
+.featured-role .role-flag{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--gold-text-safe);
+    background:rgba(212,175,55,.14);
+    padding:5px 12px;
+    border-radius:999px;
+    margin-bottom:14px;
+}
+.featured-role h3{ color:var(--primary-dark); font-weight:700; margin-bottom:10px; }
+.featured-role .job-meta{ color:var(--gray); font-size:14px; margin-bottom:22px; }
+.featured-role .job-meta i{ color:var(--gold-dark); margin-right:5px; }
+.featured-role h4{ font-size:15px; font-weight:700; color:var(--primary-dark); margin:22px 0 10px; }
+.featured-role ul{ padding-left:20px; margin-bottom:0; }
+.featured-role li{ margin-bottom:8px; color:var(--gray); font-size:14.5px; }
+.featured-role li strong{ color:var(--dark); }
+.featured-role .role-note{
+    background:var(--light);
+    border-radius:10px;
+    padding:14px 16px;
+    font-size:13.5px;
+    color:var(--gray);
+    margin:22px 0 0;
+}
+@media (max-width:767px){
+    .featured-role{ padding:24px 20px; }
+    .voice-box{ padding:16px; }
+    .apply-aside{ padding:22px 20px; }
+}
+.hero-fallback-note{ font-size:13.5px; color:var(--gray); margin-top:12px; margin-bottom:0; }
+.hero-fallback-note a{ color:var(--primary); }
+
+/* The site centres text on <body>; these blocks are read top-to-bottom, so they
+   opt out. Scoped to the apply/careers additions so Contact and Quote are untouched. */
+.apply-panel,
+.apply-aside,
+.featured-role{ text-align:left; }
+
+/* Labels in the application grid wrap to one or two lines; pinning their height on
+   desktop keeps every input in a row sitting on the same baseline. */
+@media (min-width:768px){
+    .apply-panel .row > [class*="col-"] > label{ min-height:2.9em; }
+}
