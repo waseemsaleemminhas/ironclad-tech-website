@@ -387,7 +387,9 @@ It only takes two minutes, and I would like to check whether you already have co
  * DIFFERENT deployment from the contact/quote endpoint and a different spreadsheet
  * from the sales data.
  *
- * SET THIS BEFORE GOING LIVE: paste the /exec URL into APPLY_ENDPOINT below.
+ * The deployed /exec URL is set in APPLY_ENDPOINT below. The same URL serves the
+ * staff review page on GET, which is access-code gated server-side, so it is safe
+ * to ship in this page.
  *
  * Note on the request: the body is sent as FormData on purpose. multipart/form-data is
  * a CORS-safelisted content type, so the browser sends no preflight — and Apps Script
@@ -396,7 +398,7 @@ It only takes two minutes, and I would like to check whether you already have co
 (function () {
   'use strict';
 
-  var APPLY_ENDPOINT = ''; // <-- paste the Apps Script /exec URL here
+  var APPLY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxAl_r8n0vnEZiS9TOwfmPAGVFwzp_eWxzPIvgnivR9KNCBMWxvw5aDc9N4lXz2gXD9/exec';
 
   var MAX_CV_MB = 5, MAX_VOICE_MB = 3, MAX_RECORD_SECONDS = 90;
 
