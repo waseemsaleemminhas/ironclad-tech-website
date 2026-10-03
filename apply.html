@@ -174,10 +174,12 @@
 <select class="form-control" id="f-role" name="role" required>
 <option value="">Choose a position…</option>
 <option>Fronter / Cold Calling Agent</option>
+<!-- DEACTIVATED (not hiring right now). Delete these two comment lines to offer them again.
 <option>Healthcare BPO Associate</option>
 <option>Insurance Enrollment Specialist</option>
 <option>Customer Support Representative</option>
 <option>Team Lead, Operations</option>
+-->
 <option>Other</option>
 </select>
 </div>
@@ -438,10 +440,14 @@ It only takes two minutes, and I would like to check whether you already have co
   /* ---- Pre-fill the role from the link that brought them here ---- */
   var SLUGS = {
     fronter: 'Fronter / Cold Calling Agent',
-    healthcare: 'Healthcare BPO Associate',
-    insurance: 'Insurance Enrollment Specialist',
-    support: 'Customer Support Representative',
-    lead: 'Team Lead, Operations'
+    // These four roles are deactivated and their options are commented out above.
+    // Old ad links still land somewhere sensible: setting .value to an option that
+    // no longer exists silently selects nothing, leaving the applicant on a blank
+    // dropdown, so point them at Other instead.
+    healthcare: 'Other',
+    insurance: 'Other',
+    support: 'Other',
+    lead: 'Other'
   };
   try {
     var params = new URLSearchParams(window.location.search);
