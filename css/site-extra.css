@@ -351,6 +351,17 @@
 .job-card h3{ font-weight:700; color:var(--primary-dark); margin-bottom:6px; }
 .job-card .job-meta{ color:var(--gray); font-size:14px; }
 .job-card .job-meta i{ color:var(--gold-dark); margin-right:5px; }
+/* Roles that are not open right now: still listed, but clearly not applyable. */
+.job-card.is-closed{ background:#fbfbfc; box-shadow:none; border:1px solid #e5e7eb; }
+.job-card.is-closed:hover{ box-shadow:none; transform:none; }
+.job-card.is-closed h3{ color:var(--gray); }
+.job-badge-closed{
+    display:inline-block; margin-left:10px; vertical-align:middle;
+    font-size:12px; font-weight:600; letter-spacing:.03em; text-transform:uppercase;
+    color:var(--gray); background:#eef1f4; border-radius:999px; padding:3px 10px;
+}
+.job-closed-label{ color:var(--gray); font-size:14px; font-weight:600; }
+
 .culture-card{ text-align:center; padding:26px 16px; }
 .culture-card i{ font-size:34px; color:var(--gold-dark); margin-bottom:14px; }
 .culture-card h3{ font-weight:700; margin-bottom:8px; }

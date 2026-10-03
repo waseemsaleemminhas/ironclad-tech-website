@@ -328,7 +328,7 @@
 <input class="form-control" type="file" id="f-cv" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required>
 <small class="field-hint">PDF or Word. Maximum 5 MB. If you do not have a CV, write your details in a Word file and upload that.</small>
 
-<h4 class="form-section-head">5. Voice sample <span class="optional-tag">strongly recommended</span></h4>
+<h4 class="form-section-head">5. Voice sample <span class="req-star">*</span></h4>
 <div class="voice-box">
 <p class="form-sub mb-2">This is the most important part of your application. Read the three lines below out loud, clearly and at a normal speed. It takes about forty-five seconds. Do not worry about sounding perfect &mdash; we only want to hear how you speak English.</p>
 <blockquote class="voice-script">
@@ -518,8 +518,22 @@ It only takes two minutes, and I would like to check whether you already have co
         paintTimer();
         if (seconds >= MAX_RECORD_SECONDS) stopRecording();
       }, 1000);
-    }).catch(function () {
-      recMsg.textContent = 'We could not use your microphone. Allow microphone access, or upload an audio file below instead.';
+    }).catch(function (err) {
+      // getUserMedia reports the cause in err.name. Swallowing it told every
+      // applicant the same thing no matter why it failed, so none of them knew
+      // which fix to apply.
+      var name = (err && err.name) || '';
+      var msg;
+      if (name === 'NotAllowedError' || name === 'SecurityError') {
+        msg = 'Your browser is blocking the microphone for this site. Tap the padlock in the address bar, set Microphone to Allow, then reload this page. Or record elsewhere and upload the file below.';
+      } else if (name === 'NotFoundError' || name === 'OverconstrainedError') {
+        msg = 'No microphone was found on this device. Record a voice note on your phone, or use the free online recorder linked below, then upload the file.';
+      } else if (name === 'NotReadableError' || name === 'AbortError') {
+        msg = 'Another app is using your microphone. Close it (Zoom, Teams, WhatsApp) and try again, or upload an audio file below.';
+      } else {
+        msg = 'We could not use your microphone (' + (name || 'unknown error') + '). Record a voice note in any app and upload the file below instead.';
+      }
+      recMsg.textContent = msg;
     });
   });
 
@@ -609,7 +623,9 @@ It only takes two minutes, and I would like to check whether you already have co
     }
 
     if (!recordedBlob && !(voiceInput.files && voiceInput.files.length)) {
-      if (!window.confirm('You have not added a voice sample.\n\nThe voice sample is how we assess spoken English, and applications without one are much less likely to be shortlisted.\n\nSubmit anyway?')) return;
+      show('A voice sample is required. Record one in section 5, or upload an audio file there.', 'error');
+      voiceInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
     }
 
     var original = submitBtn.innerHTML;
