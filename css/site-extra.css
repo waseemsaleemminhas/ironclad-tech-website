@@ -351,6 +351,12 @@
 .job-card h3{ font-weight:700; color:var(--primary-dark); margin-bottom:6px; }
 .job-card .job-meta{ color:var(--gray); font-size:14px; }
 .job-card .job-meta i{ color:var(--gold-dark); margin-right:5px; }
+/* The one detail applicants most often miss on the open role. Caps come from CSS,
+   not the markup, so screen readers still read it as a normal sentence. */
+.job-emphasis{
+    color:#C0392B; font-weight:800; text-transform:uppercase; letter-spacing:.02em;
+}
+
 /* Roles that are not open right now: still listed, but clearly not applyable. */
 .job-card.is-closed{ background:#fbfbfc; box-shadow:none; border:1px solid #e5e7eb; }
 .job-card.is-closed:hover{ box-shadow:none; transform:none; }
